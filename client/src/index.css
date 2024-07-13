@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  height: 100vh;
+}
+
 body {
   background: rgb(255, 249, 249);
 }
