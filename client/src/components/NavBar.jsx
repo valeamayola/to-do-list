@@ -6,7 +6,7 @@ function Navbar() {
     const { isAuthenticated, logout, user } = useAuth();
 
     return (
-        <nav className="bg-[#B4C400] flex justify-between py-5 px-10 my-4 rounded-xl">
+        <nav className="bg-lime-500 flex justify-between py-5 px-10 my-4 rounded-xl">
             <Link to='/'>
                 <h1 className="text-2xl font-bold">TO-DO LIST</h1>
             </Link>
@@ -16,7 +16,7 @@ function Navbar() {
                         <li className='mx-2 font-semibold'>
                             Bienvenido {user.username} 👋🏼
                         </li>
-                        <li className='mx-2'>
+                        <li className='md:mx-2'>
                             <Link
                                 to='/add-task'
                                 className='bg-lime-100 px-4 py-1 rounded-xl'

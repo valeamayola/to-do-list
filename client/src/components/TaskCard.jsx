@@ -6,21 +6,26 @@ function TaskCard({ task }) {
     const { deleteTask } = useTasks();
 
     return (
-        <div className="bg-lime-100 max-w-md w-full p-10 rounded-xl">
-            <header className="flex justify-between">
-                <h1 className="text-2xl font-bold">{task.title}</h1>
-                <div className="flex gap-x-2 items-center">
-                    <Link to={`/tasks/${task._id}`}>Editar</Link>
-                    <button onClick={() => {
+        <div className="bg-lime-100 max-w-full w-full p-10 rounded-xl">
+            <h1 className="text-2xl font-bold">{task.title}</h1>
+            <p className="text-slate-900 text-lg my-2">{task.description}</p>
+            <p className='font-semibold'>{new Date(task.date).toLocaleDateString()}</p>
+            <div className="flex gap-x-2 items-center mt-2">
+                <Link
+                    to={`/tasks/${task._id}`}
+                    className='bg-lime-500 rounded-xl py-2 px-4'
+                >
+                    Editar
+                </Link>
+                <button
+                    onClick={() => {
                         deleteTask(task._id);
                     }}
-                    >
-                        Eliminar
-                    </button>
-                </div>
-            </header>
-            <p className="text-slate-700">{task.description}</p>
-            <p>{new Date(task.date).toLocaleDateString()}</p>
+                    className='bg-lime-500 rounded-xl py-2 px-4'
+                >
+                    Eliminar
+                </button>
+            </div>
         </div>
     )
 }
