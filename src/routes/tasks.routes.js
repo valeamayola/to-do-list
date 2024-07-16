@@ -9,8 +9,11 @@ import {
 } from '../controllers/tasks.controller.js';
 import { validateSchema } from '../middlewares/validator.middleware.js';
 import { createTaskSchema } from '../schemas/task.schema.js';
+import { validateRole } from '../middlewares/validateRole.js';
 
 const router = Router();
+
+// router.get('/admin-route', authRequired, validateRole(['admin']), adminController.getAdminData);
 
 router.get('/tasks', authRequired, getTasks);
 
@@ -23,7 +26,11 @@ router.post(
     createTask
 );
 
-router.delete('/tasks/:id', authRequired, deleteTask);
+router.delete(
+    '/tasks/:id', 
+    authRequired,
+    // validateRole(['admin']), 
+    deleteTask);
 
 router.put('/tasks/:id', authRequired, updateTask);
 

@@ -31,9 +31,10 @@ function RegisterPage() {
                     </div>
                 ))
             }
+            <h1 className='font-bold text-4xl mb-4'>Registro</h1>
             <form onSubmit={onSubmit}>
                 <input type='text' {...register('username', { required: true })}
-                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2'
+                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2 text-lg'
                     placeholder='Usuario'
                 />
                 {
@@ -43,7 +44,7 @@ function RegisterPage() {
                     </p>
                 }
                 <input type='email' {...register('email', { required: true })}
-                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2'
+                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2 text-lg'
                     placeholder='Email'
                 />
                 {
@@ -53,7 +54,7 @@ function RegisterPage() {
                     </p>
                 }
                 <input type='password' {...register('password', { required: true })}
-                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2'
+                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2 text-lg'
                     placeholder='Contraseña'
                 />
                 {
@@ -62,15 +63,18 @@ function RegisterPage() {
                         Contraseña es requerida
                     </p>
                 }
-                <button type='submit'>
+                <button 
+                type='submit'
+                className='bg-lime-400 py-2 px-4 rounded-xl my-2 text-lg'
+                >
                     Registrar
                 </button>
             </form>
-            <p className='flex gap-x-2 justify-between'>
+            <p className='flex gap-x-2 justify-between text-lg'>
                 ¿Ya tienes una cuenta? 
                 <Link 
                 to='/login'
-                className='text-lime-600 font-semibold'>Iniciar sesión</Link>
+                className='text-lime-600 font-semibold text-lg'>Iniciar sesión</Link>
             </p>
             </div>
         </div>

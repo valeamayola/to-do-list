@@ -31,10 +31,10 @@ function LoginPage() {
                     </div>
                 ))
             }
-                <h1 className='text-2xl font-bold'>Login</h1>
+                <h1 className='text-4xl font-bold mb-4'>Login</h1>
             <form onSubmit={onSubmit}>
                 <input type='email' {...register('email', { required: true })}
-                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2'
+                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2 text-lg'
                     placeholder='Email'
                 />
                 {
@@ -44,7 +44,7 @@ function LoginPage() {
                     </p>
                 }
                 <input type='password' {...register('password', { required: true })}
-                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2'
+                    className='w-full bg-zinc-50 text-zinc-900 px-4 py-2 rounded-md my-2 text-lg'
                     placeholder='Contraseña'
                 />
                 {
@@ -53,15 +53,18 @@ function LoginPage() {
                         Contraseña es requerida
                     </p>
                 }
-                <button type='submit'>
+                <button 
+                type='submit'
+                className='bg-lime-400 py-2 px-4 rounded-xl my-2 text-lg'
+                >
                     Iniciar sesión
                 </button>
             </form>
-            <p className='flex gap-x-2 justify-between'>
+            <p className='flex gap-x-2 justify-between text-lg'>
                 ¿No tienes una cuenta aún? 
                 <Link 
                 to='/register'
-                className='text-lime-600 font-semibold'>Registrate</Link>
+                className='text-lime-600 font-semibold text-lg'>Registrate</Link>
             </p>
             </div>
         </div>

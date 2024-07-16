@@ -6,8 +6,10 @@ function Navbar() {
     const { isAuthenticated, logout, user } = useAuth();
 
     return (
-        <nav className="bg-lime-500 flex justify-between py-5 px-10 my-4 rounded-xl">
-            <Link to='/'>
+        <nav className="bg-lime-500 flex items-center justify-between py-5 px-10 my-4 rounded-xl">
+            <Link to={
+                isAuthenticated ? '/tasks' :'/'
+            }>
                 <h1 className="text-2xl font-bold">TO-DO LIST</h1>
             </Link>
             <ul className="flex gap-x-2">
@@ -40,7 +42,7 @@ function Navbar() {
                         <li className='mx-2'>
                             <Link
                                 to='/login'
-                                className='bg-lime-100 px-4 py-1 rounded-xl'
+                                className='bg-lime-100 px-4 py-1 rounded-xl text-lg'
                             >
                                 Login
                             </Link>
@@ -48,7 +50,7 @@ function Navbar() {
                         <li className='ml-2'>
                             <Link
                                 to='/register'
-                                className='bg-lime-100 px-4 py-1 rounded-xl'
+                                className='bg-lime-100 px-4 py-1 rounded-xl text-lg'
                             >
                                 Register
                             </Link>

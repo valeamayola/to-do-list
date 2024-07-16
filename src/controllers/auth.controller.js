@@ -18,6 +18,7 @@ export const register = async (req, res) => {
             username,
             email,
             password: passwordHash,
+            // role: role || 'regular',
         });
 
         const userSaved = await newUser.save();
