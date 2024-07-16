@@ -1,1 +1,1 @@
-export const TOKEN_SECRET = 'clavesecreta'
+export const TOKEN_SECRET = '123456'
