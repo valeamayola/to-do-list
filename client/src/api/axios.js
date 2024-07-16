@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://to-do-list-server-flame.vercel.app/api',
+    baseURL: 'https://to-do-list-client-alpha.vercel.app//api',
     withCredentials: true
 });
 
