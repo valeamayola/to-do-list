@@ -9,7 +9,7 @@ import tasksRoutes from './routes/tasks.routes.js';
 const app = express()
 
 app.use(cors({
-    origin: 'https://to-do-list-client-alpha.vercel.app/',
+    origin: 'https://to-do-list-server-flame.vercel.app/',
     credentials: true
 }));
 app.use(morgan('dev'));
